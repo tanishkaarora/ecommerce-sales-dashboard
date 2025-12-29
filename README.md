@@ -1,97 +1,119 @@
-# E-Commerce Sales Dashboard 📊
+# 📊 E-Commerce Sales Dashboard
 
-An end-to-end **E-Commerce Sales Dashboard** built using **FastAPI**, **SQLAlchemy**, and **Dash**.  
-This project demonstrates backend API development, database integration, and interactive data visualization.
-
----
-
-## 🚀 Project Description
-
-This project allows managing and visualizing e-commerce sales data through:
-- A REST API for sales records
-- A database for persistent storage
-- An interactive dashboard for analytics
-
-It is suitable for **academic submission, viva explanation, and portfolio projects**.
+An end-to-end **E-Commerce Sales Analysis Dashboard** built using **FastAPI, SQLAlchemy, and Dash**.  
+This project demonstrates how backend APIs, databases, and interactive dashboards work together to provide real-time business insights.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Project Overview
 
-- Python  
-- FastAPI  
-- SQLAlchemy  
-- SQLite  
-- Dash & Plotly  
-- Uvicorn
+This project collects e-commerce sales data through a REST API, stores it in a database, and visualizes key business metrics using an interactive dashboard.  
+It is designed to simulate a real-world analytics system used by businesses to monitor sales performance.
 
-- 📂 Project Structure 
+---
 
----ecom dashboard/
+## 🧱 System Architecture (High Level)
+
+- **FastAPI** – Handles sales data through REST APIs  
+- **SQLAlchemy** – Manages database models and storage  
+- **SQLite** – Stores sales records  
+- **Dash & Plotly** – Visualizes data in an interactive dashboard  
+
+---
+
+## 📁 Project Structure
+
+ecommerce-sales-dashboard/
 │
-├── main.py
-├── database.py
-├── models.py
-├── schemas.py
-├── add_data.py
+├── main.py # FastAPI backend entry point
+├── database.py # Database connection and setup
+├── models.py # Database table definitions
+├── schemas.py # Data validation schemas
+├── add_data.py # Script to insert sample data
 ├── dashboard/
-│ └── dashboard.py
-├── README.md
-└── pycache/
-
+│ └── dashboard.py # Interactive dashboard application
+└── README.md # Project documentation
 
 ---
 
-## ⚙️ Features
+## ⚙️ Features Implemented
 
-- Create and fetch sales data via API  
-- Store sales records in SQLite  
-- Auto-create database tables  
-- Interactive sales dashboard  
-- Modular and clean code structure  
+### 🔹 Backend API
+- REST API built using FastAPI
+- Accepts sales data and stores it in the database
+- Provides endpoints for data access
+
+### 🔹 Database Management
+- Sales data stored using SQLAlchemy ORM
+- Structured schema with category, price, and quantity fields
+- Automatic table creation on startup
+
+### 🔹 Interactive Dashboard
+- Real-time data visualization
+- Business-oriented charts for decision making
+- Clean and responsive interface
 
 ---
 
-## ▶️ How to Run
+## 📊 Dashboard Insights
 
-### Install Dependencies
+### 📌 Sales by Category
+Shows how sales are distributed across different product categories, helping identify top-performing categories.
+
+### 📌 Revenue Distribution
+Displays how total revenue is generated from different categories based on price and quantity sold.
+
+### 📌 Quantity Sold Analysis
+Highlights the total number of units sold, useful for understanding demand trends.
+
+### 📌 Interactive Visualizations
+All charts are interactive, allowing users to explore data dynamically.
+
+---
+
+## ▶️ How to Run the Project
+
+### 1️⃣ Start the Backend API
 ```bash
-pip install fastapi uvicorn sqlalchemy dash plotly
-uvicorn main:app --reload
-API Docs:
+python main.py
+```
+API documentation will be available at:
 
 http://127.0.0.1:8000/docs
-Insert Sample Data
+2️⃣ Insert Sample Data
 python add_data.py
-Run Dashboard
+3️⃣ Run the Dashboard
 python dashboard/dashboard.py
+Open in browser:
+
 http://127.0.0.1:8050
-##Dashboard Insights
-
-Sales by category
-
-Revenue distribution
-
-Quantity sold analysis
-
-Interactive visualizations
 
 🎯 Learning Outcomes
 
 FastAPI REST API development
 
-Database modeling with SQLAlchemy
+Database modeling using SQLAlchemy
 
-Backend–dashboard integration
+Backend and dashboard integration
+
+Data analysis and visualization
 
 Real-world project structuring
 
 Git & GitHub workflow
 
-👩‍💻 Author
+🧠 Use Case
 
-Tanishka Arora
-GitHub: https://github.com/tanishkaarora
+This dashboard can be used by:
 
+Business analysts
 
+Sales managers
 
+Students learning full-stack analytics
+
+Academic project demonstrations
+
+📌 Conclusion
+
+This project demonstrates a complete data flow from API → Database → Dashboard, showcasing how backend systems power real-time business analytics in production-level applications.
